@@ -103,6 +103,7 @@
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+            cursor: pointer;
         }
         
         .cta-button:hover {
@@ -196,5 +197,23 @@
             <div class="circles"></div>
         </div>
     </div>
+
+    <script>
+        // Simple animation for the CTA button
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctaButton = document.querySelector('.cta-button');
+            
+            ctaButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Thanks for your interest in AdGenie! This would redirect to the main website in a real implementation.');
+            });
+            
+            // Add pulsing animation to the magic wand
+            const magicWand = document.querySelector('.fa-magic');
+            setInterval(() => {
+                magicWand.style.transform = magicWand.style.transform === 'scale(1.1)' ? 'scale(1)' : 'scale(1.1)';
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
